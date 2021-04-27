@@ -49,7 +49,7 @@ namespace BatteryEvaluation
                     counter = 1;
                     continue;
                 }
-                else if (readingList[i] == currentReading || readingList[i] == currentReading + 1)
+                else if (readingList[i] == currentReading + 1)
                 {
                     endRange = readingList[i];
                     currentReading = readingList[i];
