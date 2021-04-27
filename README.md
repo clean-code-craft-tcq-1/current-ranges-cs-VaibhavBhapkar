@@ -52,5 +52,5 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 Implement one failing test and at least one passing test:
 
-- _enter the name of a **passing** test
-- _enter the name of a **failing** test
+- ValidateReadingList_ValidCurrentReadingsList_True | FindRangeWiseReadingsFromCurrentList_ReadingListIsProvided_RangeWiseReadingsResult | FindRangeWiseReadingsFromCurrentList_ReadingListIsGiven_ExpectingRangeWiseReadings
+- ValidateReadingList_EmptyCurrentReadingsList_False | FindRangeWiseReadingsFromCurrentList_EmptyReadingListIsProvided_NullRangeWiseReadingsResult | FindRangeWiseReadingsFromCurrentList_ReadingListIsGiven_FalseExpectedCheck
