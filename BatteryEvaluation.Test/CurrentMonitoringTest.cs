@@ -45,7 +45,7 @@ namespace BatteryEvaluation.Test
         }
 
         [Fact]
-        public void FindRangeWiseReadingsFromCurrentList_EmptyReadingListIsProvided_RangeWiseReadingsResult()
+        public void FindRangeWiseReadingsFromCurrentList_EmptyReadingListIsProvided_NullRangeWiseReadingsResult()
         {
             CurrentMonitoring currentMonitoring = new CurrentMonitoring();
             List<int> currentReadingsList = new List<int>();
