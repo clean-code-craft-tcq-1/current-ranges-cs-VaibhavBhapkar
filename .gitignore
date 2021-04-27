@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/BatteryEvaluation/bin/Debug/netcoreapp3.1
+/BatteryEvaluation/obj
+/BatteryEvaluation.Test/bin/Debug/netcoreapp3.1
+/BatteryEvaluation.Test/obj
