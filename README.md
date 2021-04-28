@@ -54,3 +54,13 @@ Implement one failing test and at least one passing test:
 
 - ValidateReadingList_ValidCurrentReadingsList_True | FindRangeWiseReadingsFromCurrentList_ReadingListIsProvided_RangeWiseReadingsResult 
 - ValidateReadingList_EmptyCurrentReadingsList_False | FindRangeWiseReadingsFromCurrentList_EmptyReadingListIsProvided_NullRangeWiseReadingsResult | FindRangeWiseReadingsFromCurrentList_ReadingListIsGiven_FalseExpectedCheck
+
+
+
+
+## MY ASSIGNMENT DETAILS
+
+1. Firstly written a test to check current mesaurment list(empty & valid) accordinglt feature is added in devlopemnt
+2. Second for finding the range wise reading test case is defined then written a function which will perform operation on list and return reading according to ranges
+3. In test case while comparing the object its not allowing so written assertion helper which will help in comparing result object
+4. Finally Added all the workflows complexity,duplication & build with test coverage.
