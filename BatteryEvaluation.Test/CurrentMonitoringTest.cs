@@ -23,23 +23,29 @@ namespace BatteryEvaluation.Test
         }
 
         [Fact]
-        public void ValidateReadingList_EmptyCurrentReadingsList_False()
+        public void GivenReadingList_WhenReadingsListIsNull_ThenFalse()
         {
-            List<int> emptyReadingList = new List<int>();
-            bool actualResult = currentMonitoring.ValidateReadingList(emptyReadingList);
+            List<int> emptyReadingList = null;
+            bool actualResult = currentMonitoring.IsReadingListValid(emptyReadingList);
             Assert.False(actualResult);
         }
-
         [Fact]
-        public void ValidateReadingList_ValidCurrentReadingsList_True()
+        public void GivenReadingList_WhenReadingsListIsEmpty_ThenFalse()
+        {
+            List<int> emptyReadingList=new List<int>();
+            bool actualResult = currentMonitoring.IsReadingListValid(emptyReadingList);
+            Assert.False(actualResult);
+        }
+        [Fact]
+        public void GivenReadingList_WhenReadingListIsValid_ThenTrue()
         {
             List<int> validReadingList = new List<int>() { 3, 3, 5, 4, 10, 11, 12 };
-            bool actualResult = currentMonitoring.ValidateReadingList(validReadingList);
+            bool actualResult = currentMonitoring.IsReadingListValid(validReadingList);
             Assert.True(actualResult);
         }
 
         [Fact]
-        public void FindRangeWiseReadingsFromCurrentList_ReadingListIsProvided_RangeWiseReadingsResult()
+        public void GivenReadingListInput_WhenListIsValid_ThenReturnRangeWisePairs()
         {
             List<RangeWiseReadings> rangeWiseReadingsList = ExpectedResultList();
             List<int> currentReadingsList = new List<int>() { 3, 3, 5, 4, 10, 11, 12 };
@@ -48,7 +54,7 @@ namespace BatteryEvaluation.Test
         }
 
         [Fact]
-        public void FindRangeWiseReadingsFromCurrentList_EmptyReadingListIsProvided_NullRangeWiseReadingsResult()
+        public void GivenReadingListInput_WhenListIsEmpty_ThenReturnNullInRangeWiseReading()
         {            
             List<int> emptyReadingList = new List<int>();
             List<RangeWiseReadings> actualReadingList = currentMonitoring.FindRangeWiseReadingsFromCurrentList(emptyReadingList);
@@ -56,7 +62,7 @@ namespace BatteryEvaluation.Test
         }
 
         [Fact]
-        public void FindRangeWiseReadingsFromCurrentList_ReadingListIsGiven_FalseExpectedCheck()
+        public void GivenReadingListInput_WhenListIsValid_ThenRetrunedRangeWisePairsValidateWithFalseExpected()
         {
             List<RangeWiseReadings> falseExpectedReadings = ExpectedResultList();
             List<int> currentReadingsList = new List<int>() { 3, 3, 5, 4, 7, 8, 10, 11, 12 };

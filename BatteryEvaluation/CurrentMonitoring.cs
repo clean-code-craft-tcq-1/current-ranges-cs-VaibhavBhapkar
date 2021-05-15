@@ -8,21 +8,25 @@ namespace BatteryEvaluation
 {
     public class CurrentMonitoring
     {
-        public bool ValidateReadingList(List<int> readingList)
+        public bool IsReadingListValid(List<int> readingList)
         {
-            if ((readingList != null) && (readingList.Count != 0))
+            if ((readingList == null))
             {
-                return true;
+                return false;
+            }
+            else if (readingList.Count == 0)
+            {
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
         }
         public List<RangeWiseReadings> FindRangeWiseReadingsFromCurrentList(List<int> readingsList)
         {
-            List<RangeWiseReadings> rangeWiseReadingsFromList = new List<RangeWiseReadings>();
-            if (ValidateReadingList(readingsList))
+            List<RangeWiseReadings> rangeWiseReadingsFromList = null;
+            if (IsReadingListValid(readingsList))
             {
                 rangeWiseReadingsFromList = EvaluateCurrentRangesForRangeWiseReadings(readingsList);
             }   
